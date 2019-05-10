@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="demo" extends="struts-default" namespace="/">
+        <interceptors>
+            <interceptor name="corsInterceptor" class="com.ichangge.ssh.system.interceptors.CorsInterceptor" />
+        </interceptors>
+        <action name="listUser" class="demoAction" method="listUser">
+            <result name="listUser">/WEB-INF/pages/listUser.jsp</result>
+        </action>
+        <action name="index" class="demoAction" method="index">
+            <result name="index">/WEB-INF/pages/index.jsp</result>
+        </action>
+    </package>
+</struts>

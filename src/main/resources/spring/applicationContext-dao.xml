@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://132.232.105.228:3306/first_app?useUnicde=true&amp;autoReconnect=true&amp;characterEncoding=utf8"/>
+        <property name="user" value="root" />
+        <property name="password" value="chuanDAO11075,.//.,"/>
+        <property name="loginTimeout" value="3600"/>
+        <property name="acquireRetryAttempts" value="3"/>
+        <property name="autoCommitOnClose" value="false"/>
+        <property name="initialPoolSize" value="10"/>
+        <property name="maxPoolSize" value="300" />
+        <property name="acquireIncrement" value="3" />
+        <property name="testConnectionOnCheckin" value="false"/>
+        <property name="testConnectionOnCheckout" value="true"/>
+    </bean>
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="demoAction" class="com.ichangge.ssh.demo.action.DemoAction" scope="prototype">
+        <property name="userService" ref="userService"></property>
+    </bean>
+    <bean id="userService" class="com.ichangge.ssh.demo.service.UserService" scope="prototype">
+        <property name="userRepository" ref="userRepository"></property>
+    </bean>
+    <bean id="userRepository" class="com.ichangge.ssh.demo.dao.UserRepository" scope="prototype">
+        <property name="repositoryExecutor" ref="repositoryExecutor"></property>
+    </bean>
+    <bean id="repositoryExecutor" class="com.ichangge.ssh.system.dbutil.RepositoryExecutor" scope="singleton">
+    </bean>
+    <import resource="classpath:spring/applicationContext-dao.xml"/>
+</beans>

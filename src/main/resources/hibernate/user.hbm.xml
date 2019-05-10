@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ichangge.ssh.demo.model">
+    <class name="com.ichangge.ssh.demo.model.UserEntity" table="user">
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="identity"></generator>
+        </id>
+        <property name="account" column="account" type="java.lang.String"></property>
+        <property name="mobileNo" column="mobile_no" type="java.lang.String"></property>
+        <property name="createTime" column="create_time" type="java.lang.Long"></property>
+        <property name="nickName" column="nick_name" type="java.lang.String"></property>
+        <property name="userName" column="user_name" type="java.lang.String"></property>
+        <property name="pwd" column="pwd" type="java.lang.String"></property>
+    </class>
+</hibernate-mapping>
